@@ -16,7 +16,7 @@ logger:
 # Enable Home Assistant API
 api:
   encryption:
-    key: "YourKeyHere"
+    key: "8PYziai1AqlPoEF0IrQ74g+AqeO+/+PELJeQkaKE/yE="
 
 ota:
   - platform: esphome
@@ -79,6 +79,7 @@ modbus_controller:
 # Tekstsensoren
 text_sensor:
   - name: "Marstek Device Name"
+    id: "lilygo_rs485_marstek_device_name"
     platform: modbus_controller
     modbus_controller_id: mt
     register_type: holding
@@ -114,6 +115,7 @@ text_sensor:
 binary_sensor:
   - platform: modbus_controller
     name: "Marstek PLL Abnormal Restart"
+    id: "lilygo_rs485_marstek_pll_abnormal_restart"
     modbus_controller_id: mt
     register_type: holding
     address: 36000
@@ -122,6 +124,7 @@ binary_sensor:
 
   - platform: modbus_controller
     name: "Marstek Overtemperature Limit"
+    id: "lilygo_rs485_marstek_overtemperature_limit"
     modbus_controller_id: mt
     register_type: holding
     address: 36000
@@ -130,6 +133,7 @@ binary_sensor:
 
   - platform: modbus_controller
     name: "Marstek Low Temperature Limit"
+    id: "lilygo_rs485_marstek_low_temperature_limit"
     modbus_controller_id: mt
     register_type: holding
     address: 36000
@@ -138,6 +142,7 @@ binary_sensor:
 
   - platform: modbus_controller
     name: "Marstek Fan Abnormal Warning"
+    id: "lilygo_rs485_marstek_fan_abnormal_warning"
     modbus_controller_id: mt
     register_type: holding
     address: 36000
@@ -146,6 +151,7 @@ binary_sensor:
 
   - platform: modbus_controller
     name: "Marstek Low Battery SOC Warning"
+    id: "lilygo_rs485_marstek_low_battery_soc_warning"
     modbus_controller_id: mt
     register_type: holding
     address: 36000
@@ -154,6 +160,7 @@ binary_sensor:
 
   - platform: modbus_controller
     name: "Marstek Output Overcurrent Warning"
+    id: "lilygo_rs485_marstek_output_overcurrent_warning"
     modbus_controller_id: mt
     register_type: holding
     address: 36000
@@ -162,6 +169,7 @@ binary_sensor:
 
   - platform: modbus_controller
     name: "Marstek Abnormal Line Sequence Detection"
+    id: "lilygo_rs485_marstek_abnormal_line_sequence_detection"
     modbus_controller_id: mt
     register_type: holding
     address: 36000
@@ -170,6 +178,7 @@ binary_sensor:
 
   - platform: modbus_controller
     name: "Marstek Wifi Abnormal"
+    id: "lilygo_rs485_marstek_wifi_abnormal"
     modbus_controller_id: mt
     register_type: holding
     address: 36001
@@ -178,6 +187,7 @@ binary_sensor:
 
   - platform: modbus_controller
     name: "Marstek BLE abnormal"
+    id: "lilygo_rs485_marstek_ble_abnormal"
     modbus_controller_id: mt
     register_type: holding
     address: 36001
@@ -186,6 +196,7 @@ binary_sensor:
 
   - platform: modbus_controller
     name: "Marstek Network abnormal"
+    id: "lilygo_rs485_marstek_network_abnormal"
     modbus_controller_id: mt
     register_type: holding
     address: 36001
@@ -194,6 +205,7 @@ binary_sensor:
 
   - platform: modbus_controller
     name: "Marstek CT connection abnormal"
+    id: "lilygo_rs485_marstek_ct_connection_abnormal"
     modbus_controller_id: mt
     register_type: holding
     address: 36001
@@ -202,6 +214,7 @@ binary_sensor:
 
   - platform: modbus_controller
     name: "Marstek Grid overvoltage"
+    id: "lilygo_rs485_marstek_grid_overvoltage"
     modbus_controller_id: mt
     register_type: holding
     address: 36100
@@ -210,6 +223,7 @@ binary_sensor:
 
   - platform: modbus_controller
     name: "Marstek Grid undervoltage"
+    id: "lilygo_rs485_marstek_grid_undervoltage"
     modbus_controller_id: mt
     register_type: holding
     address: 36100
@@ -218,6 +232,7 @@ binary_sensor:
 
   - platform: modbus_controller
     name: "Marstek Grid overfrequency"
+    id: "lilygo_rs485_marstek_grid_overfrequency"
     modbus_controller_id: mt
     register_type: holding
     address: 36100
@@ -226,6 +241,7 @@ binary_sensor:
 
   - platform: modbus_controller
     name: "Marstek Grid underfrequency"
+    id: "lilygo_rs485_marstek_grid_underfrequency"
     modbus_controller_id: mt
     register_type: holding
     address: 36100
@@ -234,6 +250,7 @@ binary_sensor:
 
   - platform: modbus_controller
     name: "Marstek Grid peak voltage abnormal"
+    id: "lilygo_rs485_marstek_grid_peak_voltage_abnormal"
     modbus_controller_id: mt
     register_type: holding
     address: 36100
@@ -242,6 +259,7 @@ binary_sensor:
 
   - platform: modbus_controller
     name: "Marstek Current Dcover"
+    id: "lilygo_rs485_marstek_current_dcover"
     modbus_controller_id: mt
     register_type: holding
     address: 36100
@@ -250,6 +268,7 @@ binary_sensor:
 
   - platform: modbus_controller
     name: "Marstek Voltage Dcover"
+    id: "lilygo_rs485_marstek_voltage_dcover"
     modbus_controller_id: mt
     register_type: holding
     address: 36100
@@ -258,6 +277,7 @@ binary_sensor:
 
   - platform: modbus_controller
     name: "Marstek BAT overvoltage"
+    id: "lilygo_rs485_marstek_bat_overvoltage"
     modbus_controller_id: mt
     register_type: holding
     address: 36101
@@ -266,6 +286,7 @@ binary_sensor:
 
   - platform: modbus_controller
     name: "Marstek BAT undervoltage"
+    id: "lilygo_rs485_marstek_bat_undervoltage"
     modbus_controller_id: mt
     register_type: holding
     address: 36101
@@ -274,6 +295,7 @@ binary_sensor:
 
   - platform: modbus_controller
     name: "Marstek BAT overcurrent"
+    id: "lilygo_rs485_marstek_bat_overcurrent"
     modbus_controller_id: mt
     register_type: holding
     address: 36101
@@ -282,6 +304,7 @@ binary_sensor:
 
   - platform: modbus_controller
     name: "Marstek BAT low SOC"
+    id: "lilygo_rs485_marstek_bat_low_soc"
     modbus_controller_id: mt
     register_type: holding
     address: 36101
@@ -290,6 +313,7 @@ binary_sensor:
 
   - platform: modbus_controller
     name: "Marstek BAT communication failure"
+    id: "lilygo_rs485_marstek_bat_communication_failure"
     modbus_controller_id: mt
     register_type: holding
     address: 36101
@@ -298,6 +322,7 @@ binary_sensor:
 
   - platform: modbus_controller
     name: "Marstek BMS protect"
+    id: "lilygo_rs485_marstek_bms_protect"
     modbus_controller_id: mt
     register_type: holding
     address: 36101
@@ -306,7 +331,7 @@ binary_sensor:
 
   - platform: status
     name: "WiFi Status"
-    id: wifi_status
+    id: "lilygo_rs485_wifi_status"
 
 # Sensoren
 sensor:
@@ -319,6 +344,7 @@ sensor:
     internal: true # Hides from Home Assistant
 
   - name: "Marstek Firmware Version"
+    id: "lilygo_rs485_marstek_firmware_version"
     platform: modbus_controller
     modbus_controller_id: mt
     register_type: holding
@@ -328,6 +354,7 @@ sensor:
     skip_updates: 60 # 5 minutes
 
   - name: "Marstek Battery Voltage (Average)"
+    id: "lilygo_rs485_marstek_battery_voltage_average"
     platform: modbus_controller
     modbus_controller_id: mt
     register_type: holding
@@ -342,6 +369,7 @@ sensor:
     skip_updates: 60 # 5 minutes
     
   - name: "Marstek Battery Current (Average)"
+    id: "lilygo_rs485_marstek_battery_current_average"
     platform: modbus_controller
     modbus_controller_id: mt
     register_type: holding
@@ -355,6 +383,7 @@ sensor:
       - multiply: 0.01
 
   - name: "Marstek Battery Power"
+    id: "lilygo_rs485_marstek_battery_power"
     platform: modbus_controller
     modbus_controller_id: mt
     register_type: holding
@@ -367,6 +396,7 @@ sensor:
     skip_updates: 2 # 10 seconds
 
   - name: "Marstek Battery State Of Charge"
+    id: "lilygo_rs485_marstek_battery_state_of_charge" # Was marstek_soc
     platform: modbus_controller
     modbus_controller_id: mt
     register_type: holding
@@ -374,10 +404,10 @@ sensor:
     value_type: U_WORD
     unit_of_measurement: "%"
     accuracy_decimals: 1
-    id: marstek_soc
     skip_updates: 60 # 5 minutes
 
   - name: "Marstek Battery Total Energy"
+    id: "lilygo_rs485_marstek_battery_total_energy" # Was marstek_total_energy
     platform: modbus_controller
     modbus_controller_id: mt
     register_type: holding
@@ -387,23 +417,24 @@ sensor:
     accuracy_decimals: 2
     filters:
       - multiply: 0.001 # Firmware 148: 0.001 / Firmware 147: 0.01
-    id: marstek_total_energy
     skip_updates: 60 # 5 minutes
 
   - platform: template
     name: "Marstek Battery Remaining Capacity"
+    id: "lilygo_rs485_marstek_battery_remaining_capacity"
     unit_of_measurement: "kWh"
     accuracy_decimals: 2
     update_interval: 300s
     lambda: |-
-      if (id(marstek_total_energy).has_state() && id(marstek_soc).has_state()) {
-        float total_energy = id(marstek_total_energy).state;
-        float soc = id(marstek_soc).state / 100.0;
+      if (id(lilygo_marstek_battery_total_energy).has_state() && id(lilygo_marstek_battery_state_of_charge).has_state()) {
+        float total_energy = id(lilygo_marstek_battery_total_energy).state;
+        float soc = id(lilygo_marstek_battery_state_of_charge).state / 100.0;
         return roundf(total_energy * soc * 100) / 100; // Ensures two decimal places
       }
       return NAN;
 
   - name: "Marstek AC Voltage"
+    id: "lilygo_rs485_marstek_ac_voltage"
     platform: modbus_controller
     modbus_controller_id: mt
     register_type: holding
@@ -418,6 +449,7 @@ sensor:
     skip_updates: 60 # 5 minutes
 
   - name: "Marstek AC Current"
+    id: "lilygo_rs485_marstek_ac_current"
     platform: modbus_controller
     modbus_controller_id: mt
     register_type: holding
@@ -431,6 +463,7 @@ sensor:
       - multiply: 0.01
 
   - name: "Marstek AC Power"
+    id: "lilygo_rs485_marstek_ac_power"
     platform: modbus_controller
     modbus_controller_id: mt
     register_type: holding
@@ -443,6 +476,7 @@ sensor:
     skip_updates: 2 # 10 seconds
 
 #  - name: "Marstek AC Offgrid Voltage"
+#    id: "lilygo_rs485_marstek_ac_offgrid_voltage"
 #    platform: modbus_controller
 #    modbus_controller_id: mt
 #    register_type: holding
@@ -456,6 +490,7 @@ sensor:
 #    skip_updates: 60 # 5 minutes
 
 #  - name: "Marstek AC Offgrid Current"
+#    id: "lilygo_rs485_marstek_ac_offgrid_current"
 #    platform: modbus_controller
 #    modbus_controller_id: mt
 #    register_type: holding
@@ -468,6 +503,7 @@ sensor:
 #      - multiply: 0.01
 
 #  - name: "Marstek AC Offgrid Power"
+#    id: "lilygo_rs485_marstek_ac_offgrid_power"
 #    platform: modbus_controller
 #    modbus_controller_id: mt
 #    register_type: holding
@@ -479,6 +515,7 @@ sensor:
 #    accuracy_decimals: 0
 
   - name: "Marstek Total Charging Energy"
+    id: "lilygo_rs485_marstek_total_charging_energy"
     platform: modbus_controller
     modbus_controller_id: mt
     register_type: holding
@@ -494,6 +531,7 @@ sensor:
     skip_updates: 60 # 5 minutes
 
   - name: "Marstek Total Discharging Energy"
+    id: "lilygo_rs485_marstek_total_discharging_energy"
     platform: modbus_controller
     modbus_controller_id: mt
     register_type: holding
@@ -509,6 +547,7 @@ sensor:
     skip_updates: 60 # 5 minutes
 
   - name: "Marstek Daily Charging Energy"
+    id: "lilygo_rs485_marstek_daily_charging_energy"
     platform: modbus_controller
     modbus_controller_id: mt
     register_type: holding
@@ -524,6 +563,7 @@ sensor:
     skip_updates: 60 # 5 minutes
 
   - name: "Marstek Daily Discharging Energy"
+    id: "lilygo_rs485_marstek_daily_discharging_energy"
     platform: modbus_controller
     modbus_controller_id: mt
     register_type: holding
@@ -539,6 +579,7 @@ sensor:
     skip_updates: 60 # 5 minutes
 
   - name: "Marstek Monthly Charging Energy"
+    id: "lilygo_rs485_marstek_monthly_charging_energy"
     platform: modbus_controller
     modbus_controller_id: mt
     register_type: holding
@@ -554,6 +595,7 @@ sensor:
     skip_updates: 60 # 5 minutes
 
   - name: "Marstek Monthly Discharging Energy"
+    id: "lilygo_rs485_marstek_monthly_discharging_energy"
     platform: modbus_controller
     modbus_controller_id: mt
     register_type: holding
@@ -569,6 +611,7 @@ sensor:
     skip_updates: 60 # 5 minutes
 
   - name: "Marstek Internal Temperature"
+    id: "lilygo_rs485_marstek_internal_temperature"
     platform: modbus_controller
     modbus_controller_id: mt
     register_type: holding
@@ -583,6 +626,7 @@ sensor:
     skip_updates: 60 # 5 minutes
 
   - name: "Marstek Internal MOS1 Temperature"
+    id: "lilygo_rs485_marstek_internal_mos1_temperature"
     platform: modbus_controller
     modbus_controller_id: mt
     register_type: holding
@@ -595,8 +639,9 @@ sensor:
     skip_updates: 60 # 5 minutes
     filters:
       - multiply: 0.1
-   
+    
   - name: "Marstek Internal MOS2 Temperature"
+    id: "lilygo_rs485_marstek_internal_mos2_temperature"
     platform: modbus_controller
     modbus_controller_id: mt
     register_type: holding
@@ -611,6 +656,7 @@ sensor:
       - multiply: 0.1
 
   - name: "Marstek Max. Cell Temperature"
+    id: "lilygo_rs485_marstek_max_cell_temperature"
     platform: modbus_controller
     modbus_controller_id: mt
     register_type: holding
@@ -625,6 +671,7 @@ sensor:
       - multiply: 0.1
     
   - name: "Marstek Min. Cell Temperature"
+    id: "lilygo_rs485_marstek_min_cell_temperature"
     platform: modbus_controller
     modbus_controller_id: mt
     register_type: holding
@@ -639,6 +686,7 @@ sensor:
       - multiply: 0.1
     
   - name: "Marstek Battery Charge Voltage Limit"
+    id: "lilygo_rs485_marstek_battery_charge_voltage_limit"
     platform: modbus_controller
     modbus_controller_id: mt
     register_type: holding
@@ -653,6 +701,7 @@ sensor:
       - multiply: 0.01
 
   - name: "Marstek Battery Charge Current Limit"
+    id: "lilygo_rs485_marstek_battery_charge_current_limit"
     platform: modbus_controller
     modbus_controller_id: mt
     register_type: holding
@@ -667,6 +716,7 @@ sensor:
       - multiply: 0.01
 
   - name: "Marstek Battery Discharge Current Limit"
+    id: "lilygo_rs485_marstek_battery_discharge_current_limit"
     platform: modbus_controller
     modbus_controller_id: mt
     register_type: holding
@@ -682,14 +732,14 @@ sensor:
 
   - platform: wifi_signal
     name: "WiFi Signal Strength"
-    id: wifi_strength
+    id: "wifi_strength" # Was wifi_strength
     update_interval: 30s
 
   # An internal sensor to check Modbus communication status.
   - platform: modbus_controller
     modbus_controller_id: mt
     name: "Modbus Status"
-    id: modbus_status
+    id: "modbus_status" # Was modbus_status
     register_type: holding
     address: 32104  # Using the Battery SOC register as a reference
     value_type: U_WORD
@@ -698,6 +748,7 @@ sensor:
 # Instellingen en modi (Select en Number)
 select:
   - name: "Marstek RS485 Control Mode"
+    id: "lilygo_rs485_marstek_rs485_control_mode"
     icon: mdi:swap-horizontal
     platform: modbus_controller
     modbus_controller_id: mt
@@ -709,6 +760,7 @@ select:
     skip_updates: 2 # 10 seconds
 
   - name: "Marstek Forcible Charge/Discharge" 
+    id: "lilygo_rs485_marstek_forcible_chargedischarge"
     platform: modbus_controller
     modbus_controller_id: mt
     address: 42010
@@ -720,6 +772,7 @@ select:
     skip_updates: 2 # 10 seconds
 
   - name: "Marstek Backup Function"
+    id: "lilygo_rs485_marstek_backup_function"
     platform: modbus_controller
     modbus_controller_id: mt
     address: 41200
@@ -730,6 +783,7 @@ select:
     skip_updates: 2 # 10 seconds
 
   - name: "Marstek User Work Mode"
+    id: "lilygo_rs485_marstek_user_work_mode"
     icon: mdi:auto-mode
     platform: modbus_controller
     modbus_controller_id: mt
@@ -743,6 +797,7 @@ select:
 
 number:
   - name: "Marstek Forcible Charge Power"
+    id: "lilygo_rs485_marstek_forcible_charge_power"
     icon: mdi:tune-variant
     mode: box
     platform: modbus_controller
@@ -757,6 +812,7 @@ number:
     skip_updates: 2 # 10 seconds
 
   - name: "Marstek Charge To SOC"
+    id: "lilygo_rs485_marstek_charge_to_soc"
     icon: mdi:battery-charging-medium 
     mode: box
     platform: modbus_controller
@@ -770,6 +826,7 @@ number:
     step: 1
 
   - name: "Marstek Forcible Discharge Power"
+    id: "lilygo_rs485_marstek_forcible_discharge_power"
     icon: mdi:tune-variant
     mode: box
     platform: modbus_controller
@@ -784,6 +841,7 @@ number:
     skip_updates: 2 # 10 seconds
 
   - name: "Marstek Charging Cutoff Capacity"
+    id: "lilygo_rs485_marstek_charging_cutoff_capacity"
     icon: mdi:battery-90
     platform: modbus_controller
     modbus_controller_id: mt
@@ -797,6 +855,7 @@ number:
     skip_updates: 6 # 30 seconds
 
   - name: "Marstek Discharging Cutoff Capacity"
+    id: "lilygo_rs485_marstek_discharging_cutoff_capacity"
     icon: mdi:battery-10
     platform: modbus_controller
     modbus_controller_id: mt
@@ -810,6 +869,7 @@ number:
     skip_updates: 6 # 30 seconds
 
   - name: "Marstek Max. Charge Power"
+    id: "lilygo_rs485_marstek_max_charge_power"
     icon: mdi:tune-variant
     mode: box
     platform: modbus_controller
@@ -824,6 +884,7 @@ number:
     skip_updates: 2 # 10 seconds
 
   - name: "Marstek Max. Discharge Power"
+    id: "lilygo_rs485_marstek_max_discharge_power"
     icon: mdi:tune-variant
     mode: box
     platform: modbus_controller
