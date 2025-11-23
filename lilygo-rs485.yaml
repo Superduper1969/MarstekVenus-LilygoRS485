@@ -1410,7 +1410,7 @@ interval:
                   - light.turn_on:
                       id: status_led
                       red: 0%
-                      green: !lambda "return id(led_brightness).state / 100 ;"  # 🟢 Modbus OK & WiFi strong
+                      green: 100%  # 🟢 Modbus OK & WiFi strong
                       blue: 0%
                 else:
                   - if:
@@ -1420,9 +1420,9 @@ interval:
                       then:
                         - light.turn_on:
                             id: status_led
-                            red: !lambda "return id(led_brightness).state / 100.0 ;"  # 🟣 Both Modbus & WiFi failed
+                            red: 100%  # 🟣 Both Modbus & WiFi failed
                             green: 0%
-                            blue: !lambda "return id(led_brightness).state / 100.0 ;"
+                            blue: 100%
                       else:
                         - if:
                             condition:
@@ -1433,11 +1433,11 @@ interval:
                                   id: status_led
                                   red: 0%
                                   green: 0%
-                                  blue: !lambda "return id(led_brightness).state / 100.0 ;"  # 🔵 Weak WiFi
+                                  blue: 100%  # 🔵 Weak WiFi
                             else:
                               - light.turn_on:
                                   id: status_led
-                                  red: !lambda "return id(led_brightness).state / 100.0 ;"  # 🔴 Modbus error
+                                  red: 100%  # 🔴 Modbus error
                                   green: 0%
                                   blue: 0%
 
