@@ -1214,7 +1214,7 @@ select:
       sorting_group_id: Control
       sorting_weight: 1
 
-  - name: "Marstek Forcible Charge-Discharge" 
+  - name: "Forcible Charge⁄Discharge"
     id: "lilygo_rs485_marstek_forcible_chargedischarge"
     platform: modbus_controller
     modbus_controller_id: mt
