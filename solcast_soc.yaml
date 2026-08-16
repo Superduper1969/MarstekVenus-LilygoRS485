@@ -1,0 +1,31 @@
+automation:
+  - id: solcast
+    alias: Set target soc HBC
+    description: Zet charge target SOC op basis van PV-forecast.
+    mode: single
+
+    triggers:
+      - trigger: time
+        at: "00:05:00"
+
+    variables:
+      pv_kwh_raw: "{{ state_attr('sensor.solcast_pv_forecast_forecast_today', 'estimate') }}"
+      pv_kwh: "{{ pv_kwh_raw | float(0) }}"
+      sensor_ok: "{{ pv_kwh_raw is not none and pv_kwh_raw not in ['unknown', 'unavailable'] }}"
+
+    actions:
+      - action: input_number.set_value
+        target:
+          entity_id: input_number.house_battery_strategy_charge_target_soc
+        data:
+          value: >
+            {% if not sensor_ok %} 80
+            {% elif pv_kwh < 2 %}  90
+            {% elif pv_kwh < 4 %}  80
+            {% elif pv_kwh < 6 %}  70
+            {% elif pv_kwh < 8 %}  60
+            {% elif pv_kwh < 10 %} 50
+            {% elif pv_kwh < 12 %} 40
+            {% elif pv_kwh < 15 %} 35
+            {% else %}             30
+            {% endif %}
